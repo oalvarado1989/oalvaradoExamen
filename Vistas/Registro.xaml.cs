@@ -32,8 +32,8 @@ public partial class Registro : ContentPage
         string apellido = txtApellido.Text;
         string edad = txtEdad.Text;
         string fecha = Fecha.Date.ToString();
-        string ciudad = Ciudad.Items.Count.ToString();
-        string pais = Pais.Items.Count.ToString();
+        string ciudad = Ciudad.Items[Ciudad.SelectedIndex];
+        string pais = Pais.Items[Pais.SelectedIndex];
         string montoInicial = txtMonto.Text;
         string pagoMensual = txtPagoMensual.Text;
         double total = Convert.ToDouble(montoInicial) + Convert.ToDouble(pagoMensual);
