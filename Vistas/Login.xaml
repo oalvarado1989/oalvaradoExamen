@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oalvaradoExamen.Vistas.Login"
+             Title="Login">
+    <VerticalStackLayout Spacing="20" Padding="25">
+        <Label 
+            Text="Login"
+            TextColor="Red"
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario"
+                   TextColor="Blue"
+                   FontSize="20"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese Usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Label Text="Contraseña"
+                   TextColor="Blue"
+                   FontSize="20"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtContrasena"
+                   Placeholder="Ingrese contraseña"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   IsPassword="True"/>
+        </Grid>
+
+        <Button x:Name="btnIniciar"
+                Text="Iniciar Sesión"
+                Clicked="btnIniciar_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
