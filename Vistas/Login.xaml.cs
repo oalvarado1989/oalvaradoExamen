@@ -41,4 +41,9 @@ public partial class Login : ContentPage
             DisplayAlert("Error de autenticación","Dato incorrecto", "OK");
         }
     }
+
+    private void btnAcerca_Clicked(object sender, EventArgs e)
+    {
+        DisplayAlert("Información del Desarrollador", "Nombre: Javier Alvarado \nCurso: 8vo A\n","Ok");
+    }
 }

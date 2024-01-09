@@ -43,10 +43,20 @@
                    Grid.Row="1"
                    Grid.Column="1"
                    IsPassword="True"/>
+
+            <Button x:Name="btnIniciar"
+                    Text="Iniciar Sesión"
+                    Clicked="btnIniciar_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="0"/>
+
+            <Button x:Name="btnAcerca"
+                    Text="Acerca de:"
+                    Clicked="btnAcerca_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
         </Grid>
 
-        <Button x:Name="btnIniciar"
-                Text="Iniciar Sesión"
-                Clicked="btnIniciar_Clicked"/>
+        
     </VerticalStackLayout>
 </ContentPage>

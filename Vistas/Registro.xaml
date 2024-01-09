@@ -26,8 +26,137 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <DatePicker x:Name="Fecha" Date="08/01/2024"/>
-            
+            <Label Text="Fecha"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <DatePicker x:Name="Fecha" Date="08/01/2024"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+
+            <Label Text="País"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Picker x:Name="Pais"
+                    Grid.Row="1"
+                    Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Ecuador</x:String>
+                    <x:String>Bolivia</x:String>
+                    <x:String>Venezuela</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Ciudad"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+            <Picker x:Name="Ciudad"
+                    Grid.Row="2"
+                    Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Quito</x:String>
+                    <x:String>Sucre</x:String>
+                    <x:String>Caracas</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Monto Inicial"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="3"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtMonto"
+                   Placeholder="Ingrese Monto Inicial"
+                   Keyboard="Numeric"
+                   MaxLength="5"
+                   Grid.Row="3"
+                   Grid.Column="1">
+            </Entry>
+
+            <Label Text="Pago Mensual"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="4"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtPagoMensual"
+                   IsEnabled="False"
+                   Grid.Row="4"
+                   Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtNombre"
+                   Placeholder="Ingrese Nombre"
+                   Grid.Row="1"
+                   Grid.Column="0">
+            </Entry>
+
+            <Label Text="Apellido"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <Entry x:Name="txtApellido"
+                   Placeholder="Ingrese Apellido"
+                   Grid.Row="1"
+                   Grid.Column="1">
+            </Entry>
+
+            <Label Text="Edad"
+                   TextColor="Blue"
+                   FontSize="15"
+                   Grid.Row="0"
+                   Grid.Column="2"/>
+            <Entry x:Name="txtEdad"
+                   Placeholder="Ingrese Edad"
+                   Keyboard="Numeric"
+                   MaxLength="3"
+                   Grid.Row="1"
+                   Grid.Column="2">
+            </Entry>
+
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnCalcular"
+                    Text="Calcular Pago Mensual"
+                    Clicked="btnCalcular_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+
+            <Button x:Name="btnResumen"
+                    Text="Ver Resumen"
+                    Clicked="btnResumen_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
         </Grid>
 
     </VerticalStackLayout>
