@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="oalvaradoExamen.Vistas.Registro"
+             NavigationPage.HasNavigationBar="False"
              Title="Registro">
     <VerticalStackLayout Spacing="20" Padding="25">
         <Label x:Name="lblUsuario"
@@ -31,7 +32,7 @@
                    FontSize="15"
                    Grid.Row="0"
                    Grid.Column="0"/>
-            <DatePicker x:Name="Fecha" Date="08/01/2024"
+            <DatePicker x:Name="Fecha" Date="01/01/2024"
                         Grid.Row="0"
                         Grid.Column="1"/>
 

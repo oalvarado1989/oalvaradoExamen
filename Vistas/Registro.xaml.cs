@@ -11,12 +11,11 @@ public partial class Registro : ContentPage
     private void btnCalcular_Clicked(object sender, EventArgs e)
     {
         double montoInicial = Convert.ToDouble(txtMonto.Text);
-        double pagoMensual = (1500 - montoInicial)/ 4 + (0.4 * 1500);
-        double total = montoInicial + (pagoMensual * 4);
+        double pagoMensual = (1500 - montoInicial)/ 4 + (0.04 * 1500);
 
         if(montoInicial>=1500)
         {
-            DisplayAlert("Error de autenticación", "Error", "OK");
+            DisplayAlert("Error de autenticación", "Error ", "OK");
         }
         else
         {
@@ -36,7 +35,7 @@ public partial class Registro : ContentPage
         string pais = Pais.Items[Pais.SelectedIndex];
         string montoInicial = txtMonto.Text;
         string pagoMensual = txtPagoMensual.Text;
-        double total = Convert.ToDouble(montoInicial) + Convert.ToDouble(pagoMensual);
+        double total = Convert.ToDouble(montoInicial) + (Convert.ToDouble(pagoMensual)*4);
 
         DisplayAlert("RESUMEN \n", "Nombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + 
             "\nFecha: " + fecha + "\nCiudad: " + ciudad + "\nPais: " + pais + "\nMonto Inicial: " + montoInicial 
